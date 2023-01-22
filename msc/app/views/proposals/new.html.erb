@@ -1,0 +1,23 @@
+<%= render "layouts/navbar" %>
+
+<div class="d-flex align-items-center justify-content-center">
+
+<%= form_with model: @proposals , url:proposals_path do |f| %>
+<div class="form-group">
+    <h1>Criar Proposta</h1>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: "form-control" %>
+</div>
+
+<div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id, class: "form-control" %>
+</div>
+
+<div class="actions">
+    <%= f.submit "Criar", class: "btn btn-primary" %>
+</div>
+</div>
+
+<% end %>
+

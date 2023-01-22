@@ -1,0 +1,11 @@
+<%= render "layouts/navbar" %>
+<h1>Lista de Propostas</h1>
+
+<ul>
+<% @proposals.each do |prop| %>
+
+  <li><%= prop.title %></li>
+
+  <li><%= prop.file %></li>
+<% end %>
+</ul>
